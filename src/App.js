@@ -4,20 +4,22 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          An Tran hoc react
-        </a>
-      </header>
+
+      <Header></Header>
+
+      <Button onClick={showNoti}> Show toast</Button>
+
+      <Switch>
+
+        <Route path='/' component={CounterFeature} exact />
+        <Route path='/todos' component={TodoFeature} />
+        <Route path='/albums' component={AlbumFeature} />
+        {/*<Route component={NotFound} />*/}
+      </Switch>
+
+
+      Footer
+
     </div>
   );
 }
